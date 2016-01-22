@@ -13,11 +13,13 @@
 @class Target;
 
 @class TargetMouseMove;
+@class TargetMouseAbsolute;
 
 @interface TargetController : NSObject {
 	IBOutlet KeyInputTextView* keyInput;
 	IBOutlet NSButtonCell *radioNoAction, *radioKey, *radioConfig;
 	IBOutlet NSMatrix* radioButtons;
+    IBOutlet NSSegmentedControl* mouseAbsoluteDirSelect;
     IBOutlet NSSegmentedControl* mouseDirSelect;
     IBOutlet NSSegmentedControl* mouseBtnSelect;
     IBOutlet NSSegmentedControl* scrollDirSelect;
@@ -36,6 +38,7 @@
 -(void) refreshConfigsPreservingSelection: (BOOL) preserve;
 -(IBAction)configChosen:(id)sender;
 -(IBAction)radioChanged:(id)sender;
+-(IBAction)mabsoluteDirChanged:(id)sender;
 -(IBAction)mdirChanged:(id)sender;
 -(IBAction)mbtnChanged:(id)sender;
 -(IBAction)sdirChanged:(id)sender;

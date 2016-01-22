@@ -23,6 +23,8 @@
         return [TargetMouseScroll unstringifyImpl:components];
     if([typeTag isEqualToString:@"mtoggle"])
         return [TargetToggleMouseScope unstringifyImpl:components];
+    if([typeTag isEqualToString:@"mabsolute"])
+        return [TargetMouseAbsolute unstringifyImpl:components];
 		
 	NSParameterAssert(NO);
 	return NULL;
